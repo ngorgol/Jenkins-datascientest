@@ -10,13 +10,11 @@ pipeline {
             steps{
                 sh 'pip install -r requirements.txt'
             }
-
         }
         stage ('Testing'){
             steps{
                 sh 'python -m unittest'
             }
-
         }
         stage ('Deploying'){
             steps{
@@ -56,7 +54,6 @@ pipeline {
                     }
 
                 }
-
             }
         }
     }
