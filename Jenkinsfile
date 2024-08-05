@@ -28,7 +28,6 @@ pipeline {
                     '''
                 }
             }
-
         }
         stage ('User acceptance'){
             input {
@@ -50,7 +49,6 @@ pipeline {
                             '''
                         }
                     }
-
                 }
                 stage ('Merging'){
                     steps{
