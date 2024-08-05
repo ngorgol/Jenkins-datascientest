@@ -63,11 +63,11 @@ pipeline {
 
             }
         }
+    }
     post {
         always {
             echo "Disconnect from Dockerhub"
             sh 'docker logout'
         }
     }
-
 }
