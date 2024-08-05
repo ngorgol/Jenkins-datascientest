@@ -31,11 +31,9 @@ pipeline {
 
         }
         stage ('User acceptance'){
-            steps{
-                input {
-                    message "Proceed to push to main"
-                    ok "Yes"
-                }
+            input {
+                message "Proceed to push to main"
+                ok "Yes"
             }
         }
         stage ('Pushing and Merging'){
