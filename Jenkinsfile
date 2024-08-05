@@ -30,7 +30,7 @@ pipeline {
             }
 
         }
-        stage ('User acceptance')
+        stage ('User acceptance'){
             steps{
                 input {
                     message "Proceed to push to main"
@@ -38,7 +38,7 @@ pipeline {
                 }
             }
         }
-        stage ('Pushing and Merging')
+        stage ('Pushing and Merging'){
             parallel{
                 stage ('Pushing'){
                     environment{
@@ -62,6 +62,7 @@ pipeline {
                 }
 
             }
+        }
     post {
         always {
             echo "Disconnect from Dockerhub"
